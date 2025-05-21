@@ -20,7 +20,7 @@ export type AlertModalData = {
   detail: JSX.Element;
   state: "success" | "fail";
 };
-const inputStyle = `bg-[#f5f4fa] p-3 outline-none text-main-darkblue dark:bg-slate-600 dark:text-slate-400`;
+const inputStyle = `bg-[#f5f4fa] p-3 outline-none text-[#284e74] dark:bg-slate-600 dark:text-slate-400`;
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<EmailData>(DEFAULT_DATA);
@@ -96,7 +96,7 @@ export default function ContactForm() {
         <input type="text" name="subject" id="subject" required value={formData.subject} onChange={onChange} className={inputStyle} />
         <label htmlFor="message">Message</label>
         <textarea rows={10} name="message" id="message" required value={formData.message} onChange={onChange} className={`${inputStyle} resize-none`} />
-        <button className="w-full mt-3 bg-main-blue h-9 text-white text-bold hover:bg-main-darkblue transition-all">submit</button>
+        <button className="w-full mt-3 bg-[#a3c7e1] h-9 text-white text-bold hover:bg-[#284e74] transition-all">submit</button>
       </form>
       {openModal && true && (
         <ModalPortal>
